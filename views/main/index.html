@@ -2,6 +2,67 @@
 
 {% block main_content %}
 
-adsfk;ljalsdjflkasjdflkjasfdDfadfadsfasdfadf
+<style>
+    .mySwiper {
+        width: 100%;
+        
+    }
+
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    @media only screen and (max-width: 768px) {
+        .mySwiper {
+            height: 35%;
+        }
+    }
+
+    @media only screen and (min-width: 1800px) {
+        .mySwiper {
+            height: 750px;
+        }
+    }
+</style>
+<div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <img src="/img/jjd-1.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+            <img src="/img/jjd-2.jpg" alt="">
+        </div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+</div>
+
+
+<div class="container">
+    asldfjaslidfjliajsdf
+</div>
+
+<script>
+
+    var swiper = new Swiper(".mySwiper", {
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+</script>
+
 
 {% endblock %}
